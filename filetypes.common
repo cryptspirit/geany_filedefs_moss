@@ -1,0 +1,122 @@
+# For complete documentation of this file, please see Geany's main documentation
+[styling]
+# foreground;background;bold;italic
+#Стиль по умолчанию, используется для файлов типов, не связанных с исходными текстами.
+default=0x605566;0x191919;false;false
+
+#Цвета будут использованы только при установке для 3-го и 4-го аргументов значения 'true'.
+#По умолчанию цвет фона темно-серый, цвет шрифта зависит от синтаксического выделения.
+selection=0xC5CAB7;0x3F7CC0;true;true
+
+# Стиль для подсвечивания парных скобок.
+brace_good=0xD7AB50;0x191919;true;false
+# Стиль для подсвечивания скобок, для которых не найдены парные.
+brace_bad=0xCE4242;0x191919;true;false
+
+# the following settings define the colours of the margins on the left side
+margin_linenumber=0x506982;0x191919;true;false
+margin_folding=0x47526C;0x47526C;;false;false
+
+#Окраска фона текущей строки. Интерпретируются только второй (цвет фона)
+#и третий (true/false - вкл./выкл фон) аргументы.
+current_line=0x0;0x1E90FF;false;false
+
+#Уровни непрозрачности для текущей строки (первый аргумент) и выделения (второй аргумент).
+#Допустимы значения от 0 до 256.
+#Интерпретируются только первый и второй аргументы.
+translucency=13;100;false;false
+
+# style for a highlighted line (e.g when using Goto line or goto tag)
+# only the first and second argument is interpreted
+marker_line=0x000000;0xffff00;false;false
+
+# style for a highlighted search result (e.g when using "Mark" in Search dialogs)
+# only the first and second argument is interpreted
+marker_search=0x000000;0xB8F4B8;false;false
+
+# translucency for the line marker(first argument) and the search marker (second argument)
+# only the first and second argument is interpreted
+marker_translucency=256;256;false;false
+
+# Стиль курсора. Интерпретируются только первый и третий аргументы. Установка третьего
+# аргумента изменит вид курсора на «block».
+caret=0xB22424;0x0;false;false
+
+# Ширина курсора в пикселах, максимум — 3. Интерпретируется только первый аргумент.
+# Значение 0 сделает курсор невидимым.
+caret_width=2;0x0000FF;false;false
+
+# Окраска линий размера отступов. Интерпретируются только первый и второй аргументы.
+indent_guide=0xc0c0c0;0xffffff;false;false
+
+# Окраска пробельного пространства (табуляций и пробелов). Третий аргумент определяет,
+# использовать ли заданный здесь цвет переднего плана или цвет, заданный для
+# определенного типа файла в соотв. файле настроек.
+white_space=0xc0c0c0;0xffffff;true;false
+
+# style of folding icons, only first and second arguments are used, valid values are:
+# first argument:  1 for boxes, 2 for circles
+# second argument: 1 for straight lines, 2 for curved lines
+folding_style=1;1;false;false
+
+# Тонкая горизонтальная линия в месте сворачивания текста.
+# Интерпретируется только первый аргумент, его возможные значения:
+
+#     0 - не отображать линию,
+#     1 - линия выше свернутого текста,
+#     2 - линия ниже свернутого текста.
+folding_horiz_line=1;0;false;false
+
+# only first argument is interpreted, sets whether all defined colours should be inverted
+invert_all=0;0;false;false
+
+
+#           line_wrap_visuals
+#Визуальные отметки, показывающие что данная строка переносится по ширине окна. Значения для первого аргумента:
+#    * 0 - отметок нет,
+#    * 1 - отметка в конце подстроки (в месте переноса),
+#    * 2 - отметка в начале каждой из подстрок. Для размещения отметки делается отступ минимум на 1 знакоместо.
+#Второй аргумент определяет, показывать ли отметку около границы окна или вплотную к тексту. Значения:
+#    * 0 - около границы окна,
+#    * 1 - в конце подстроки вплотную к тексту,
+#    * 2 - в начале подстроки вплотную к тексту.
+#Остальные аргументы не интерпретируются.
+line_wrap_visuals=0;2;false;false
+
+#Первый аргумент - размер отступа для подстрок при переносе строки по ширине окна в количестве пробелов.
+#Используется только если второй аргумент - 0. Второй аргумент: сделать отступ перенесенных
+#подстрок как у первой подстроки или увеличить. Возможные значения:
+#     0 - отступ определяется первым аргументом,
+#     1 - отступ определяется по первой подстроке,
+#     2 - отступ по сравнению с первой подстрокой увеличивается на следующую ступень шкалы отступов.
+line_wrap_indent=1;0;false;false
+
+#Межстрочный интервал. Первый аргумент задает верхний отступ, второй - нижний (от базовой линии шрифта).
+#Интерпретируются только первый и второй аргументы.
+line_height=3;0;false;false
+
+[settings]
+# which characters should be skipped when moving (or included when deleting) to word boundaries
+# should always include space and tab (\s\t)
+whitespace_chars=\s\t!\"#$%&'()*+,-./:;<=>?@[\\]^`{|}~
+
+[named_styles]
+# style names to use in filetypes.* [styling] sections
+# use foreground;background;bold;italic
+# normally background should be left blank to use the "default" style
+
+deff=0xA0A0A0;0x242424;false;false
+comment=0x4B4B4B;0x242424;false;false
+commentdoc=comment
+selection=0xC5CAB7;0x3F7CC0;true;true
+number=0xA55B4B;0x242424;false;false
+# keyword
+word=0xADC447;0x242424;false;false
+# e.g. global types from a *.c.tags file
+word2=0x6390AD;0x242424;false;false
+string=0x78A03B;0x242424;false;false
+preprocessor=0x007f7f
+operator=0x301010
+# unterminated string
+stringeol=0x000000;0xe0c0e0;false;false
+type=0xADC447;0x242424;false;false
